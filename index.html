@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DoctorCare</title>
+    <title>Delícias da Bel</title>
 
+    <!-- Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -67,7 +74,9 @@
             />
           </svg> -->
         </a>
-
+        <div id="logo">
+          <a href="#home"> Delícias da Bel</a>
+        </div>
         <div class="menu">
           <ul>
             <li>
@@ -78,12 +87,14 @@
           </ul>
 
           <a class="button" onclick="closeMenu()" href="#contact"
-            >Agende sua consulta</a
+            >Entre em contato</a
           >
 
           <ul class="social-links">
             <li>
-              <a target="_blank" href="https://instagram.com/maykbrito"
+              <a
+                target="_blank"
+                href="https://www.instagram.com/_isabel_correa_/"
                 ><svg
                   width="24"
                   height="24"
@@ -116,7 +127,10 @@
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://facebook.com/maykbrito">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/isabel.correa.94"
+              >
                 <svg
                   width="24"
                   height="24"
@@ -135,7 +149,7 @@
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://youtube.com/maykbrito">
+              <a target="_blank" href="https://youtube.com/">
                 <svg
                   width="24"
                   height="24"
@@ -227,15 +241,71 @@
     <section id="home">
       <div class="wrapper">
         <div class="col-a">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/jantar.jpeg"
+                  class="d-block w-100"
+                  alt="Foto de um banquete visto de cima"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/nhoque.jpg"
+                  class="d-block w-100"
+                  alt="nhoque de batata dentro de um prato de cor laranja"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/empadao2.jpeg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-b">
           <header>
-            <h4>BOAS-VINDAS A DOCTORCARE 👋</h4>
-            <h1>Assistência médica simplificada para todos</h1>
+            <!--<h4>BOAS-VINDAS A DOCTORCARE 👋</h4> -->
+            <h1>Aqui cozinhamos com amor</h1>
           </header>
 
           <div class="content">
             <p>
-              Os médicos da DoctorCare vão além dos sintomas para tratar a causa
-              raiz de sua doença e proporcionar uma cura a longo prazo.
+              Todas as receitas são caseiras, mas com toque
+              <!--Os médicos da DoctorCare vão além dos sintomas para tratar a causa
+              raiz de sua doença e proporcionar uma cura a longo prazo. -->
             </p>
             <a class="button" href="#contact">
               <svg
@@ -251,32 +321,25 @@
                 />
               </svg>
 
-              Agende sua consulta
+              Entre em contato
             </a>
           </div>
         </div>
 
-        <div class="col-b">
-          <img
-            src="./assets/mulher-negra-com-moleton-verde-com-as-duas-maos-no-peito.png"
-            alt="Mulher negra vestindo moletom verde com as duas mãos no peito e sorrindo"
-          />
-        </div>
-
         <div class="stats">
           <div class="stat">
-            <h3>+3.500</h3>
-            <p>Pacientes atendidos</p>
+            <h3>+1.500</h3>
+            <p>Pedidos entregues</p>
           </div>
 
           <div class="stat">
             <h3>+15</h3>
-            <p>Especialistas disponíveis</p>
+            <p>Pratos diferentes</p>
           </div>
 
           <div class="stat">
             <h3>+10</h3>
-            <p>Anos no mercado</p>
+            <p>Anos de experiência</p>
           </div>
         </div>
       </div>
@@ -286,7 +349,7 @@
       <div class="wrapper">
         <header>
           <h4>Serviços</h4>
-          <h2>Como podemos ajudá-lo a se sentir melhor?</h2>
+          <h2>Delicie-se com nossas opções</h2>
         </header>
 
         <div class="content">
@@ -309,7 +372,7 @@
                 />
               </svg>
 
-              <h3>Problemas digestivos</h3>
+              <h3>Nhoque de batata doce</h3>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                 amet sint. Velit officia consequat duis enim.
@@ -334,7 +397,7 @@
                 />
               </svg>
 
-              <h3>Saúde Hormonal</h3>
+              <h3>Empadão de Camarão</h3>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                 amet sint. Velit officia consequat duis enim.
@@ -359,7 +422,7 @@
                 />
               </svg>
 
-              <h3>Bem-estar mental</h3>
+              <h3>Torta de frango</h3>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                 amet sint. Velit officia consequat duis enim.
@@ -384,7 +447,7 @@
                 />
               </svg>
 
-              <h3>Cuidados Pediátricos</h3>
+              <h3>Escondidinho de aipim</h3>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                 amet sint. Velit officia consequat duis enim.
@@ -409,7 +472,7 @@
                 />
               </svg>
 
-              <h3>Autoimune e Inflamação</h3>
+              <h3>Sobremesa de sucrilho</h3>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                 amet sint. Velit officia consequat duis enim.
@@ -434,7 +497,7 @@
                 />
               </svg>
 
-              <h3>Saúde do Coração</h3>
+              <h3>Torta de bolacha com Ganache</h3>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                 amet sint. Velit officia consequat duis enim.
@@ -468,10 +531,7 @@
         </div>
 
         <div class="col-b">
-          <img
-            src="./assets/doutor-feliz-segurando-prancheta-com-pacientes.png"
-            alt="Doutor feliz segurando prancheta com pacientes"
-          />
+          <img src="./isa_lari.jpg" alt="Isabel e Larissa" />
         </div>
       </div>
     </section>
@@ -509,7 +569,7 @@
                   />
                 </svg>
 
-                R. Amauri Souza, 346
+                R. George Lucas, 8 - Rio do Sul, SC
               </li>
               <li>
                 <svg
@@ -535,13 +595,13 @@
                   />
                 </svg>
 
-                contato@doctorcare.com
+                isabelcristinec@gmail.com
               </li>
             </ul>
 
             <a
               class="button"
-              href="https://wa.me/5511987654321"
+              href="https://wa.me/5547996143805?text=Olá, Delícias da Bel! Gostaria de fazer um pedido."
               target="_blank"
             >
               <svg
@@ -557,7 +617,7 @@
                 />
               </svg>
 
-              Agende sua consulta
+              Entre em contato
             </a>
           </div>
         </div>
@@ -634,7 +694,9 @@
         <div class="col-b">
           <ul class="social-links">
             <li>
-              <a target="_blank" href="https://instagram.com/maykbrito"
+              <a
+                target="_blank"
+                href="https://www.instagram.com/_isabel_correa_/"
                 ><svg
                   width="24"
                   height="24"
@@ -667,7 +729,10 @@
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://facebook.com/maykbrito">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/isabel.correa.94"
+              >
                 <svg
                   width="24"
                   height="24"
@@ -686,7 +751,7 @@
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://youtube.com/maykbrito">
+              <a target="_blank" href="https://youtube.com">
                 <svg
                   width="24"
                   height="24"
@@ -742,8 +807,15 @@
       </svg>
     </a>
 
+    <script src="./main.js"></script>
     <!-- ScrollReaveal Lib -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./main.js"></script>
+
+    <!-- Bootstrap Lib-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
