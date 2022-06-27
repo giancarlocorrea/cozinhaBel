@@ -1,9 +1,15 @@
 window.addEventListener('scroll', onScroll)
 
+const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches
+const isDesktop = window.matchMedia(
+  'only screen and (max-width: 1280px)'
+).matches
+
 onScroll()
 function onScroll() {
   showNavOnScroll()
-  showBackToTopButtonOnScroll()
+  if (isMobile) showBackToTopButtonOnScroll(3970)
+  else if (isDesktop) showBackToTopButtonOnScroll(2150)
 
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(services)
@@ -46,11 +52,35 @@ function showNavOnScroll() {
   }
 }
 
-function showBackToTopButtonOnScroll() {
+function showBackToTopButtonOnScroll(point) {
   if (scrollY > 550) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
+  }
+
+  if (scrollY >= point) {
+    updateBackToTopButton(backToTopButton, 'light')
+    return
+  }
+  if (
+    backToTopButton.querySelector('circle').style.fill == `var(--brand-light)`
+  ) {
+    updateBackToTopButton(backToTopButton, 'dark')
+  }
+}
+
+function updateBackToTopButton(button, op) {
+  if (op == 'dark') {
+    button.querySelector('circle').style.fill = `var(--primary-color)`
+    button.querySelectorAll('path').forEach(element => {
+      element.style.stroke = `var(--brand-light)`
+    })
+  } else if (op == 'light') {
+    button.querySelector('circle').style.fill = `var(--brand-light)`
+    button.querySelectorAll('path').forEach(element => {
+      element.style.stroke = `var(--primary-color)`
+    })
   }
 }
 
