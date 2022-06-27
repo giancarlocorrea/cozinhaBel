@@ -41,7 +41,7 @@ body {
 
   text-align: center;
 
-  overflow: overlay;
+  overflow: auto;
 
   background-color: var(--bg-light);
 }
@@ -665,7 +665,7 @@ footer .social-links {
   #home .col-a {
     text-align: left;
     align-self: center;
-    background-color: --brand-light;
+    background-color: var(--brand-light);
   }
 
   #home .col-b {

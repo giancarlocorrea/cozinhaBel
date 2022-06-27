@@ -1,5 +1,6 @@
 window.addEventListener('scroll', onScroll)
 
+const navigation = document.getElementById('navigation')
 const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches
 const isDesktop = window.matchMedia(
   'only screen and (max-width: 1024px)'
@@ -8,8 +9,9 @@ const isDesktop = window.matchMedia(
 onScroll()
 function onScroll() {
   showNavOnScroll()
+
   if (isMobile) showBackToTopButtonOnScroll(3970)
-  else if (isDesktop) showBackToTopButtonOnScroll(2150)
+  else if (isDesktop) showBackToTopButtonOnScroll(2050)
 
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(services)
@@ -46,7 +48,9 @@ function activateMenuAtCurrentSection(section) {
 
 function showNavOnScroll() {
   if (scrollY > 0) {
-    navigation.classList.add('scroll')
+    if (!navigation.classList.contains('scroll')) {
+      navigation.classList.add('scroll')
+    }
   } else {
     navigation.classList.remove('scroll')
   }
@@ -54,7 +58,9 @@ function showNavOnScroll() {
 
 function showBackToTopButtonOnScroll(point) {
   if (scrollY > 550) {
-    backToTopButton.classList.add('show')
+    if (!backToTopButton.classList.contains('show')) {
+      backToTopButton.classList.add('show')
+    }
   } else {
     backToTopButton.classList.remove('show')
   }
