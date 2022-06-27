@@ -2,7 +2,7 @@ window.addEventListener('scroll', onScroll)
 
 const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches
 const isDesktop = window.matchMedia(
-  'only screen and (max-width: 1280px)'
+  'only screen and (max-width: 1024px)'
 ).matches
 
 onScroll()
