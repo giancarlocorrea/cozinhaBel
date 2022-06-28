@@ -3,15 +3,15 @@ window.addEventListener('scroll', onScroll)
 const navigation = document.getElementById('navigation')
 const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches
 const isDesktop = window.matchMedia(
-  'only screen and (max-width: 1024px)'
+  'only screen and (max-width: 1400px)'
 ).matches
 
 onScroll()
 function onScroll() {
   showNavOnScroll()
 
-  if (isMobile) showBackToTopButtonOnScroll(3970)
-  else if (isDesktop) showBackToTopButtonOnScroll(2050)
+  if (isMobile) showBackToTopButtonOnScroll(3870)
+  else if (isDesktop) showBackToTopButtonOnScroll(1900)
 
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(services)

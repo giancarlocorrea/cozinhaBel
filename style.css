@@ -390,17 +390,28 @@ body.menu-expanded button path {
 }
 
 #services .card {
-  padding: 2.4rem;
-  text-align: left;
+  display: flex;
+  overflow: hidden;
+  
 
   background: white;
 
-  border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 }
 
+#services .card h3,
+#services .card .card-body {
+  margin-inline: 1.6rem;
+}
+
 #services .card h3 {
-  margin-block: 1.6rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+#services .card img {
+  height: 23rem;
+  margin-bottom: 2rem;
 }
 
 /*=== ABOUT =================================*/
