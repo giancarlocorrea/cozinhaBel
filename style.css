@@ -397,7 +397,7 @@ body.menu-expanded button path {
 #services .card {
   display: flex;
   overflow: hidden;
-
+  height: 43rem;
   background: white;
 
   border-radius: 0.6rem;
@@ -413,7 +413,7 @@ body.menu-expanded button path {
   text-align: center;
 }
 
-#services .card img {
+#services .cards .card img {
   height: 23rem;
   margin-bottom: 2rem;
 }
@@ -486,6 +486,19 @@ footer p {
 
 footer .social-links {
   justify-content: flex-start;
+}
+
+footer .developer {
+  display: flex;
+  justify-content: left;
+  padding-top: 3rem;
+  padding-left: 2.4rem;
+}
+
+footer .developer a {
+  color: var(--brand-light);
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
 /* BACK TO TOP */
@@ -737,6 +750,7 @@ footer .social-links {
   #services .card {
     width: 30%;
     flex-grow: 1;
+    height: 43rem;
   }
 
   /*=== ABOUT =================================*/
@@ -780,7 +794,7 @@ footer .social-links {
   }
 
   footer .col-a a {
-    color: white;
+    color: var(--brand-light);
   }
 
   footer .col-b {
@@ -790,5 +804,14 @@ footer .social-links {
 
   footer p {
     margin-bottom: 0;
+  }
+  footer .developer {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .developer a {
+    font-size: 1.2rem;
   }
 }

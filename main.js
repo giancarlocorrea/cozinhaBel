@@ -10,8 +10,8 @@ onScroll()
 function onScroll() {
   showNavOnScroll()
 
-  if (isMobile) showBackToTopButtonOnScroll(3870)
-  else if (isDesktop) showBackToTopButtonOnScroll(1900)
+  if (isMobile) showBackToTopButtonOnScroll(8000)
+  else if (isDesktop) showBackToTopButtonOnScroll(3400)
 
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(services)
