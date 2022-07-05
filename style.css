@@ -768,6 +768,12 @@ footer .developer a {
     margin-bottom: 0;
   }
 
+  #about img {
+    /*height: 20rem;
+    width: 20rem;*/
+    border-radius: 1rem;
+  }
+
   /*=== CONTACT =================================*/
 
   #contact .wrapper {
