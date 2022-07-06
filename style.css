@@ -461,6 +461,11 @@ body.menu-expanded button path {
   text-decoration: none;
 }
 
+#contact iframe {
+  height: 25rem;
+  width: 30rem;
+}
+
 /*=== FOOTER =================================*/
 footer {
   background-color: var(--primary-color);
@@ -732,7 +737,7 @@ footer .developer a {
   }
 
   #home img {
-    width: 60rem;
+    width: 90%;
   }
 
   /*=== SERVICES =================================*/
