@@ -433,6 +433,10 @@ body.menu-expanded button path {
   margin-bottom: 6rem;
 }
 
+#about img {
+  border-radius: 1rem;
+}
+
 /*=== CONTACT =================================*/
 #contact {
   text-align: left;
@@ -711,6 +715,11 @@ footer .developer a {
     font-size: 5.2rem;
   }
 
+  #home img {
+    height: 100%;
+    width: 90%;
+  }
+
   #home .content p {
     font-size: 1.8rem;
   }
@@ -734,10 +743,6 @@ footer .developer a {
   #home .button {
     margin: 0;
     display: none;
-  }
-
-  #home img {
-    width: 90%;
   }
 
   /*=== SERVICES =================================*/
@@ -788,6 +793,11 @@ footer .developer a {
 
   #contact h2 {
     width: 40.4rem;
+  }
+
+  #contact iframe {
+    height: 30rem;
+    width: 50rem;
   }
 
   /*=== FOOTER =================================*/

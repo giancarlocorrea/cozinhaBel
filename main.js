@@ -3,7 +3,7 @@ window.addEventListener('scroll', onScroll)
 const navigation = document.getElementById('navigation')
 const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches
 const isDesktop = window.matchMedia(
-  'only screen and (max-width: 1400px)'
+  'only screen and (max-width: 1000px)'
 ).matches
 
 onScroll()
