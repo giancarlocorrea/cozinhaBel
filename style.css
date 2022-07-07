@@ -245,8 +245,8 @@ body.menu-expanded .close-menu {
 }
 
 body.menu-expanded .menu {
-  top: 0;
-  left: 0;
+  top: 0vh;
+  left: 0vw;
   background: var(--primary-color);
 
   width: 100vw;
@@ -254,8 +254,8 @@ body.menu-expanded .menu {
 
   padding-top: var(--nav-height);
 
-  transition: transform 300ms;
-  transform: translateY(0);
+  transition: transform 500ms;
+  transform: translateX(0%);
 }
 
 .menu ul:nth-child(1) {

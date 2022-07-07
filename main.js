@@ -3,7 +3,7 @@ window.addEventListener('scroll', onScroll)
 const navigation = document.getElementById('navigation')
 const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches
 const isDesktop = window.matchMedia(
-  'only screen and (max-width: 1000px)'
+  'only screen and (max-width: 1400px)'
 ).matches
 
 onScroll()
@@ -92,10 +92,15 @@ function updateBackToTopButton(button, op) {
 
 function openMenu() {
   document.body.classList.add('menu-expanded')
+  document.querySelector('.menu').style.transform = 'translateX(0%)'
 }
 
 function closeMenu() {
-  document.body.classList.remove('menu-expanded')
+  document.querySelector('.menu').style.transform = 'translateX(100%)'
+
+  setTimeout(function () {
+    document.body.classList.remove('menu-expanded')
+  }, 500)
 }
 
 ScrollReveal({
