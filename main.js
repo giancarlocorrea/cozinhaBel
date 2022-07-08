@@ -91,8 +91,8 @@ function updateBackToTopButton(button, op) {
 }
 
 function openMenu() {
-  document.body.classList.add('menu-expanded')
   document.querySelector('.menu').style.transform = 'translateX(0%)'
+  document.body.classList.add('menu-expanded')
 }
 
 function closeMenu() {
