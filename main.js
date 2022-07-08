@@ -1,9 +1,17 @@
 window.addEventListener('scroll', onScroll)
 
+const navigation = document.getElementById('navigation')
+const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches
+const isDesktop = window.matchMedia(
+  'only screen and (max-width: 1400px)'
+).matches
+
 onScroll()
 function onScroll() {
   showNavOnScroll()
-  showBackToTopButtonOnScroll()
+
+  if (isMobile) showBackToTopButtonOnScroll(8000)
+  else if (isDesktop) showBackToTopButtonOnScroll(3400)
 
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(services)
@@ -40,39 +48,73 @@ function activateMenuAtCurrentSection(section) {
 
 function showNavOnScroll() {
   if (scrollY > 0) {
-    navigation.classList.add('scroll')
+    if (!navigation.classList.contains('scroll')) {
+      navigation.classList.add('scroll')
+    }
   } else {
     navigation.classList.remove('scroll')
   }
 }
 
-function showBackToTopButtonOnScroll() {
+function showBackToTopButtonOnScroll(point) {
   if (scrollY > 550) {
-    backToTopButton.classList.add('show')
+    if (!backToTopButton.classList.contains('show')) {
+      backToTopButton.classList.add('show')
+    }
   } else {
     backToTopButton.classList.remove('show')
+  }
+
+  if (scrollY >= point) {
+    updateBackToTopButton(backToTopButton, 'light')
+    return
+  }
+  if (
+    backToTopButton.querySelector('circle').style.fill == `var(--brand-light)`
+  ) {
+    updateBackToTopButton(backToTopButton, 'dark')
+  }
+}
+
+function updateBackToTopButton(button, op) {
+  if (op == 'dark') {
+    button.querySelector('circle').style.fill = `var(--primary-color)`
+    button.querySelectorAll('path').forEach(element => {
+      element.style.stroke = `var(--brand-light)`
+    })
+  } else if (op == 'light') {
+    button.querySelector('circle').style.fill = `var(--brand-light)`
+    button.querySelectorAll('path').forEach(element => {
+      element.style.stroke = `var(--primary-color)`
+    })
   }
 }
 
 function openMenu() {
+  document.querySelector('.menu').style.transform = 'translateX(0%)'
   document.body.classList.add('menu-expanded')
 }
 
 function closeMenu() {
-  document.body.classList.remove('menu-expanded')
+  document.querySelector('.menu').style.transform = 'translateX(100%)'
+
+  setTimeout(function () {
+    document.body.classList.remove('menu-expanded')
+  }, 500)
 }
 
 ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 700
+  duration: 1500
 }).reveal(`
   #home, 
   #home img, 
   #home .stats, 
   #services,
   #services header,
-  #services .card
+  #services .cards,
+  #services .card,
   #about, 
   #about header, 
   #about .content`)
