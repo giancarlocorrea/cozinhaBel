@@ -414,7 +414,8 @@ body.menu-expanded button path {
 }
 
 #services .cards .card img {
-  height: 23rem;
+  height: 50%;
+  width: 100%;
   margin-bottom: 2rem;
 }
 
